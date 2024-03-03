@@ -5,6 +5,7 @@
 
 const mongoose = require('mongoose');
 mongoose.connect("mongodb://27.0.0.1:2707//practice");
+// mongoose.connect("mongodb://localhost:27017/practice");
 
 // make schema
 
@@ -12,10 +13,11 @@ mongoose.connect("mongodb://27.0.0.1:2707//practice");
 const userschema = mongoose.Schema({
   username : String,
   name :String,
-  age :Integer,
+  age :Number,
 
-})
+});
 
 // create model and export
-// const userschema = mongoose.model(naam,schema); aur ye store userschema mei hoga ye par naam collection ka hoga jaise user,product ect
-model.export  = mongoose.model(user,userschema);
+// mongoose.model(naam,schema); aur ye store userschema mei hoga ye par naam collection ka hoga jaise user,product ect
+
+module.exports = mongoose.model("user", userschema);
