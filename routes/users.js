@@ -2,7 +2,7 @@
 // npm i mongoose
 
 // require and setup connection
-
+// ye mongodb se connect kardega aur practoce naam se ek database bana dega
 const mongoose = require('mongoose');
 mongoose.connect("mongodb://27.0.0.1:2707//practice");
 // mongoose.connect("mongodb://localhost:27017/practice");
